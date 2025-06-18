@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+    <!-- ناف بار علوي إضافي -->
+    <div class="w-full flex text-white bg-[var(--main-color-bg)] py-2 px-4 fixed top-0 z-[60] border-b border-white/10">
+       
+        <!-- الجهة اليمنى: زر تغيير اللغة وأيقونات السوشيال -->
+        <div class="max-w-7xl w-full mx-auto flex items-center justify-between">
+            <!-- الجهة اليسرى: رقم الجوال -->
+            <div class="text-xs md:text-sm font-semibold tracking-wide">
+                <a href="tel:+491234567890" class="hover:text-[var(--main-color-light)] transition">+49 123 456 7890</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <!-- زر تغيير اللغة بشكل أعلام -->
+                <button class="flex items-center gap-1 px-2 py-1 rounded transition"
+                    style="background: var(--main-color-bg); opacity: 0.2;"
+                    onmouseover="this.style.background='var(--main-color)'; this.style.opacity='0.2'"
+                    onmouseout="this.style.background='var(--main-color-bg)'; this.style.opacity='0.2'">
+                    <img src="https://flagcdn.com/24x18/gb.png" alt="English"
+                        class="w-5 h-4 rounded shadow border border-white/30">
+                    <span class="text-xs font-bold">/</span>
+                    <img src="https://flagcdn.com/24x18/de.png" alt="Deutsch"
+                        class="w-5 h-4 rounded shadow border border-white/30">
+                </button>
+                <!-- أيقونات السوشيال ميديا -->
+                <a href="#" class="hover:text-[var(--main-color-light)] transition"><svg class="w-5 h-5"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M22.46 6c-.77.35-1.6.59-2.47.7a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04A4.28 4.28 0 0 0 16.11 4c-2.37 0-4.29 1.92-4.29 4.29 0 .34.04.67.11.99C7.69 9.13 4.07 7.38 1.64 4.7c-.37.64-.58 1.39-.58 2.19 0 1.51.77 2.84 1.94 3.62-.72-.02-1.39-.22-1.98-.55v.06c0 2.11 1.5 3.87 3.5 4.27-.36.1-.74.16-1.13.16-.28 0-.54-.03-.8-.08.54 1.68 2.12 2.9 3.99 2.93A8.6 8.6 0 0 1 2 19.54c-.65 0-1.29-.04-1.92-.11A12.13 12.13 0 0 0 8.29 21.5c7.55 0 11.68-6.26 11.68-11.68 0-.18-.01-.36-.02-.54A8.18 8.18 0 0 0 24 4.59a8.36 8.36 0 0 1-2.54.7z" />
+                    </svg></a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition"><svg class="w-5 h-5"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V9h3.56v11.45zM5.34 7.67a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zm15.11 12.78h-3.56v-5.6c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.7h-3.56V9h3.42v1.56h.05c.48-.91 1.65-1.86 3.4-1.86 3.64 0 4.31 2.4 4.31 5.51v6.24z" />
+                    </svg></a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition"><svg class="w-5 h-5"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.04c-5.5 0-9.96 4.46-9.96 9.96 0 4.41 3.6 8.07 8.24 8.93v-6.32h-2.48v-2.61h2.48V9.41c0-2.45 1.49-3.8 3.68-3.8 1.07 0 2.19.19 2.19.19v2.41h-1.24c-1.22 0-1.6.76-1.6 1.54v1.85h2.72l-.44 2.61h-2.28v6.32c4.64-.86 8.24-4.52 8.24-8.93 0-5.5-4.46-9.96-9.96-9.96z" />
+                    </svg></a>
+            </div>
+
+        </div>
+    </div>
+    <!-- الهيدر الرئيسي (تحت الناف بار العلوي) -->
+    <header class="backdrop-blur-xl text-gray-900 fixed top-10 left-0 w-full z-50 flex justify-center bg-white transition-all duration-300">
+        
+        <div class="max-w-7xl w-full mx-auto flex items-center justify-between py-3 px-4">
+            <!-- الشعار -->
+            <!-- <div class="font-bold text-lg">AI Enterprise</div> -->
+            <div class="flex items-center">
+                <img src="../img/logo.png" alt="Hegmanns Gelsenkirchen Logo" class="h-20 w-auto" />
+            </div>
+            <!-- الروابط -->
+            <!-- <nav class="hidden md:flex space-x-8 space-x-reverse"> -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#" class="hover:text-[var(--main-color-light)] transition">Home</a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition">Services</a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition">Industries</a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition">Group Companies</a>
+                <a href="#" class="hover:text-[var(--main-color-light)] transition">About</a>
+                <!-- زر الطلب -->
+                <button class="text-white font-semibold px-4 py-2 rounded-lg transition text-sm"
+                    style="background: var(--main-color);" onmouseover="this.style.background='var(--main-color-hover)'"
+                    onmouseout="this.style.background='var(--main-color)'">
+                    Contact
+                </button>
+            </nav>
+
+        </div>
+    </header>
+
+    <section
+        class="text-white py-20 min-h-screen h-[100vh] bg-[var(--main-color-bg)] flex items-center justify-center w-full pt-48 xs:pt-48 md:pt-24 lg:pt-48">
+        
+        <div class="max-w-7xl w-full mx-auto text-center flex flex-col items-center  gap-12 px-4">
+
+            <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0">
+                <source src="../vedio/industrie.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+             <div class="relative z-20 flex items-center justify-center h-full text-center px-4">
+                <div class="text-white">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4">H&G HEGMANNS</h1>
+                    <p class="mb-4 text-lg md:text-xl">Ingenieurgesellschaft mbH Halle</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg">Find out more</a>
+                </div>
+            </div>
+
+            <div class="absolute top-0 left-0 w-full h-full bg-black/50 z-5"></div>
+        </div>
+    </section>
+
+    <!-- قسم خدماتنا -->
+    <section class="text-white py-20 bg-[var(--main-color-bg)] min-h-screen flex items-center justify-center w-full">
+        
+        <div class="max-w-7xl w-full mx-auto px-4 text-center">
+                <span class="bg-white/10 text-blue-400 px-4 py-1 rounded-full text-xs font-semibold mb-4">
+                    Key Features
+                </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">Comperhensive Engineering Services</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-12 text-sm md:text-base">
+                From Concept to completion, we deliver integrated solutions that drive industrial
+                excellence and Operationl efficiency.
+            </p>
+            
+        <section class="relative py-5">
+            <button onclick="scrollSlider(-1)"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)]/70 hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-l">
+                ‹
+            </button>
+                <div id="slider" class="flex gap-6 overflow-x-hidden  px-8 py-4 snap-x snap-mandatory">
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/1.jpg"
+                                alt="H&G HEGMANNS GmbH Halle" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl font-semibold">Consultation and designing</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">H&G HEGMANNS GmbH Halle</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications, plant additions or conversions.</p>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/2.jpg"
+                                alt="AGENS Engineering GmbH" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl font-semibold">Process engineering</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">AGENS Engineering GmbH</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">We offer services in all engineering phases of a project such as: Process design and simulation Calculating capacity and establishing</p>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/3.jpg"
+                                alt="AGENS Engineering GmbH" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl font-semibold">Setup and piping plans</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">AGENS Engineering GmbH</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">We are capable of handling sophisticated levels of complexity, efficiency and quality by linking performance levels using high-performance hardware and software solutions.</p>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/4.jpg"
+                                alt="AGENS Engineering GmbH" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                 <h1 class="pb-2 text-xl font-semibold">Instrumentation and control engineering</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">AGENS Engineering GmbH</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">The planning of instrumentation and control engineering services is offered as an individual service or as an element of an overall project involving the coordination of complex tasks. The following services are offered</p>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/5.jpg"
+                                alt="AGENS Engineering GmbH" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl font-semibold">Electrical engineering</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">AGENS Engineering GmbH</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">As is the case with instrumentation and control engineering, we offer electrical engineering services for every phase of planning. This can be offered for overall projects or as an individual service.</p>
+                        </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 text-left border border-white/10 flex-shrink-0 snap-start">
+                            <img src="../img/industrial.jpg"
+                                alt="AGENS Engineering GmbH" class="w-full h-24 object-cover rounded mb-4 bg-white" />
+                                 <h1 class="pb-2 text-xl font-semibold">Construction engineering</h1>
+                            <div class="mb-3">
+                                <span class="inline-block px-2 py-1 rounded text-xs font-bold"
+                                style="background: var(--main-color); opacity: 0.7;">AGENS Engineering GmbH</span>
+                            </div>
+                            <p class="text-gray-200 text-sm">Our capacities for construction planning and technical building services are limited. With the assistance of long-standing contractual partners, we are able to provide customers with </p>
+                        </div>
+                        </div>
+                </div>
+
+            <button onclick="scrollSlider(1)"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)]/70 hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-r">
+                ›
+            </button>
+    </section>
+
+
+        </div>
+    </section>
+
+    <!-- قسم الصناعات -->
+   <section class="text-white py-20 bg-white min-h-screen flex items-center justify-center w-full">
+        
+        <div class="max-w-7xl w-full mx-auto px-4 text-center">
+                  <span class="bg-blue-600 text-blue-200 px-4 py-1 rounded-full text-xs font-semibold mb-4">
+                    Key Features
+                </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl text-[var(--main-color-bg)] font-extrabold mb-4">Industries we serve</h2>
+            <p class="text-[var(--main-color)] max-w-2xl mx-auto mb-12 text-sm md:text-base">
+                From Concept to completion, we deliver integrated solutions that drive industrial
+                excellence and Operationl efficiency.
+            </p>
+            
+            <section class="relative py-2">
+
+                <button onclick="scrollSlider2(-1)"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)] hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-l">
+                        ‹
+                    </button>
+
+                    <div id="slider2" class="flex gap-6 overflow-x-hidden px-8 py-4 snap-x snap-mandatory">
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex-shrink-0 snap-start shadow-md text-left">
+                                <img src="../img/1.jpg"
+                                    alt="Company A" class="w-full h-30 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl text-[var(--main-color-bg)] font-semibold">Industrie Name</h1>
+                                <div class="mb-3">
+                                    <span class="inline-block bg-[var(--main-color)] px-2 py-1 rounded text-xs font-bold text-white">Division A</span> 
+                                </div>
+                                <p class="text-[var(--main-color-bg)] text-sm " id="trimmed-text">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex-shrink-0 snap-start shadow-md text-left">
+                                <img src="../img/2.jpg"
+                                    alt="Company A" class="w-full h-30 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl text-[var(--main-color-bg)] font-semibold">Industrie Name</h1>
+                                <div class="mb-3">
+                                    <span class="inline-block bg-[var(--main-color)] px-2 py-1 rounded text-xs font-bold text-white">Division A</span> 
+                                </div>
+                                <p class="text-[var(--main-color-bg)] text-sm " id="trimmed-text">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications.</p>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex-shrink-0 snap-start shadow-md text-left">
+                                <img src="../img/industrial.jpg"
+                                    alt="Company A" class="w-full h-30 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl text-[var(--main-color-bg)] font-semibold">Industrie Name</h1>
+                                <div class="mb-3">
+                                    <span class="inline-block bg-[var(--main-color)] px-2 py-1 rounded text-xs font-bold text-white">Division A</span> 
+                                </div>
+                                <p class="text-[var(--main-color-bg)] text-sm " id="trimmed-text">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex-shrink-0 snap-start shadow-md text-left">
+                                <img src="../img/4.jpg"
+                                    alt="Company A" class="w-full h-30 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl text-[var(--main-color-bg)] font-semibold">Industrie Name</h1>
+                                <div class="mb-3">
+                                    <span class="inline-block bg-[var(--main-color)] px-2 py-1 rounded text-xs font-bold text-white">Division A</span> 
+                                </div>
+                                <p class="text-[var(--main-color-bg)] text-sm " id="trimmed-text">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications.</p>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex-shrink-0 snap-start shadow-md text-left">
+                                <img src="../img/5.jpg"
+                                    alt="Company A" class="w-full h-30 object-cover rounded mb-4 bg-white" />
+                                <h1 class="pb-2 text-xl text-[var(--main-color-bg)] font-semibold">Industrie Name</h1>
+                                <div class="mb-3">
+                                    <span class="inline-block bg-[var(--main-color)] px-2 py-1 rounded text-xs font-bold text-white">Division A</span> 
+                                </div>
+                                <p class="text-[var(--main-color-bg)] text-sm " id="trimmed-text">Our activities range from project preparation and project planning to implementation. We offer process optimization, energy saving, modifications.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <button onclick="scrollSlider2(1)"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)] hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-r">
+                        ›
+                    </button>
+            </section>
+
+        </div>
+   </section>
+
+    <!-- قسم تعليقات العملاء -->
+    <section class="text-white py-20 min-h-screen flex items-center justify-center w-full"
+        style="background: var(--main-color-bg-light);">
+        <div class="max-w-7xl w-full mx-auto px-4 text-center">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-4">Testimonials</h2>
+            <p class="text-gray-300 max-w-2xl mx-auto mb-12 text-sm md:text-base">
+                What our clients say about us.
+            </p>
+
+            <section class="relative py-2">
+                    <!-- زر السابق -->
+                    <button onclick="scrollSlider3(-1)"
+                        class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)] hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-l">
+                        ‹
+                    </button>
+
+
+                    <div id="slider3" class="flex gap-6 overflow-x-hidden px-8 py-4 snap-x snap-mandatory">
+
+                        <div class="col-md-4">
+                             <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex flex-col items-center">
+                                <p class="text-gray-200 text-base mb-4">“Excellent service and professional team. Our project was
+                                    delivered on time and exceeded expectations.”</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1"
+                                        class="w-10 h-10 rounded-full border-2" style="border-color: var(--main-color-border);" />
+                                    <div class="text-left">
+                                        <div class="font-bold text-sm" style="color: var(--main-color-light);">John Müller</div>
+                                        <div class="text-xs text-gray-400">CEO, Tech Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                             <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex flex-col items-center">
+                                <p class="text-gray-200 text-base mb-4">“Excellent service and professional team. Our project was
+                                    delivered on time and exceeded expectations.”</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1"
+                                        class="w-10 h-10 rounded-full border-2" style="border-color: var(--main-color-border);" />
+                                    <div class="text-left">
+                                        <div class="font-bold text-sm" style="color: var(--main-color-light);">John Müller</div>
+                                        <div class="text-xs text-gray-400">CEO, Tech Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                             <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex flex-col items-center">
+                                <p class="text-gray-200 text-base mb-4">“Excellent service and professional team. Our project was
+                                    delivered on time and exceeded expectations.”</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1"
+                                        class="w-10 h-10 rounded-full border-2" style="border-color: var(--main-color-border);" />
+                                    <div class="text-left">
+                                        <div class="font-bold text-sm" style="color: var(--main-color-light);">John Müller</div>
+                                        <div class="text-xs text-gray-400">CEO, Tech Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                             <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex flex-col items-center">
+                                <p class="text-gray-200 text-base mb-4">“Excellent service and professional team. Our project was
+                                    delivered on time and exceeded expectations.”</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1"
+                                        class="w-10 h-10 rounded-full border-2" style="border-color: var(--main-color-border);" />
+                                    <div class="text-left">
+                                        <div class="font-bold text-sm" style="color: var(--main-color-light);">John Müller</div>
+                                        <div class="text-xs text-gray-400">CEO, Tech Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-4">
+                             <div class="min-w-[300px] bg-white/5 rounded-xl p-6 border border-white/10 flex flex-col items-center">
+                                <p class="text-gray-200 text-base mb-4">“Excellent service and professional team. Our project was
+                                    delivered on time and exceeded expectations.”</p>
+                                <div class="flex items-center gap-3">
+                                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client 1"
+                                        class="w-10 h-10 rounded-full border-2" style="border-color: var(--main-color-border);" />
+                                    <div class="text-left">
+                                        <div class="font-bold text-sm" style="color: var(--main-color-light);">John Müller</div>
+                                        <div class="text-xs text-gray-400">CEO, Tech Solutions</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- زر التالي -->
+                    <button onclick="scrollSlider3(1)"
+                        class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-[var(--main-color)] hover:bg-[var(--main-color)] text-white px-4 py-2 rounded-r">
+                        ›
+                    </button>
+            </section>
+        </div>
+    </section>
+
+    <!-- قسم لماذا العملاء بتختارنا -->
+    <section class="text-white bg-[var(--main-color-bg)] py-10 min-h-screen flex items-center justify-center w-full">
+        
+        <div class="max-w-7xl w-full mx-auto mt-20 px-4 flex flex-wrap items-start">
+ 
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <div class="text-gray-400 mt-10">
+                            <h2 class="text-[40px] text-white font-bold">Why Industry Leaders Choose Halle-HGH</h2>
+                            <p>
+                                Our commitment to excellence, innovation, and client success
+                                has made us the preferred engineering partner for complex
+                                industrial projects.
+                            </p>
+                        </div>
+
+                        <div class="flex mt-5">
+                            <div class="img">
+                                <i class="bi bi-patch-check-fill text-3xl text-primary"></i>
+                            </div>
+                            <div class="discption ml-3">
+                                <p class="text-gray-400 text-white font-semibold">Proven Track Record</p>
+                                <p class="text-gray-400 text-sm">Over 500 successful projects delivered on time and within budget</p>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-4">
+                            <div class="img">
+                                <i class="bi bi-people-fill text-3xl text-white"></i>
+                            </div>
+                            <div class="discption ml-3">
+                                <p class="text-gray-400 text-white font-semibold">Expert Team</p>
+                                <p class="text-gray-400 text-sm">150+ certified engineers with deep industry expertise</p>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-4">
+                            <div class="img">
+                                <i class="bi bi-award-fill text-3xl text-yellow-300"></i>
+                            </div>
+                            <div class="discption ml-3">
+                                <p class="text-gray-400 text-white font-semibold">Quality Assurance</p>
+                                <p class="text-gray-400 text-sm">ISO 9001 certified with rigorous quality management systems</p>
+                            </div>
+                        </div>
+
+                        <div class="flex mt-4">
+                            <div class="img">
+                                <i class="bi bi-globe-europe-africa text-3xl text-green-200"></i>
+                            </div>
+                            <div class="discption ml-3">
+                                <p class="text-gray-400 text-white font-semibold">Global Reach</p>
+                                <p class="text-gray-400 text-sm">International project experience across multiple continents</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="right-Img">
+                        <img src="../img/industrial.jpg" class="drop-shadow-[0_1px_10px_var(--main-color-shadow)] rounded-lg mt-10">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="text-white bg-gradient-to-br from-[#1E293B] to-[#182D66] py-10 min-h-screen w-full">
+
+        <div class="top-title text-center mt-5">
+            <h1 class="font-bold text-[40px]">Ready to Start Your Next Project</h1>
+            <p class="text-[16px]">Contact our expert team to discuss your engineering requirements and discover how we
+                can help achieve your project goals.</p>
+        </div>
+        
+        <div class="buttons flex flex-wrap items-center justify-center mt-5 gap-4">
+            <div class="btun-left bg-[var(--main-color)] hover:bg-[var(--main-color-hover)] text-white py-2 px-4 rounded-lg">
+                <a href="#">Get In Touch</a>
+            </div>
+            <div class="btun-right border rounded-lg text-white py-2 px-4 hover:bg-[var(--main-color-hover)]">
+                <a href="#">Learn More About Us</a>
+            </div>
+        </div>
+
+
+        <div class="max-w-7xl w-full mx-auto mt-20 px-4  ">
+            <div class="row mt-10">
+                <div class="col-md-3">
+                    <div class="logoandtext">
+                        <div class="img">
+                            <img src="../img/logo.png" class="w-28"> 
+                        </div>
+                        <p class="text-xs mt-2">Leading engineering consultancy providing 
+                        innovative solutions for chemical, energy, 
+                        and infrastructure industries.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <h6 class="text-lg">Services</h6>
+                    
+                    <ul class="mt-3 text-sm" style="list-style: none; line-height: 2.5rem;">
+                        <a href="#" class="text-[#94A3B8]"><li>Engineering Consulting</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Process Engineering</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>3D Laser Scanning</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Electrical Engineering</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Software Solutions</li></a>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    <h6 class="text-lg">Company</h6>
+                    
+                    <ul class="mt-3 text-sm" style="list-style: none; line-height: 2.5rem;">
+                        <a href="#" class="text-[#94A3B8]"><li>About Us</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Group Companies</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>References</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Certifications</li></a>
+                        <a href="#" class="text-[#94A3B8]"><li>Jobs</li></a>
+                    </ul>
+                </div>
+
+                <div class="col-md-3">
+                    
+                    <h6 class="text-lg">Contact</h6>
+                    
+                    <ul class="mt-3 text-sm" style="list-style: none; line-height: 2.5rem;">
+                        <li class="text-[#94A3B8]"><i class="bi bi-geo-alt text-[#5A9BEB] text-xl mx-2"></i> About Us</li>
+                        <li class="text-[#94A3B8]"><i class="bi bi-telephone text-[#5A9BEB] text-xl mx-2"></i> Group Companies</li>
+                        <li class="text-[#94A3B8]"><i class="bi bi-envelope-fill text-[#5A9BEB] text-xl mx-2"></i> References</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <hr class="text-[#94A3B8] my-3">
+
+        <div class="max-w-7xl w-full mx-auto px-4  ">
+        <div class="flex flex-wrap justify-between items-center">
+                <div class="rights">
+                <p class="text-[#94A3B8] text-sm">©<script>document.write(new Date().getFullYear())</script> Halle-HGH Engineering Solutions. All rights reserved.</p>
+            </div>
+
+            <div class="terms-FQA-police text-sm flex gap-6">
+                <a href="#" class="text-[#94A3B8]"><span>FAQ</span></a>
+                <a href="#" class="text-[#94A3B8]"><span>Privacy Policy</span></a>
+                <a href="#" class="text-[#94A3B8]"><span>Terms of Service</span></a>
+            </div>
+            </div>
+            </div>
+    </footer>
+
+    <script src="../javascript/js-slider.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+</body>
+</html>
