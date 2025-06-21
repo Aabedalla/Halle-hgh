@@ -26,3 +26,14 @@ a{
 --main-color-shadow: 0 0 60px 0 #2ceb2540;
 --main-color-border: #2ceb25;} 
 */
+
+
+@media (min-width: 768px) and (max-width: 940px) {
+    .connent-card{
+        min-width: none !important;
+    }
+    .service-card{
+        min-width: none !important;
+    }
+}
+
